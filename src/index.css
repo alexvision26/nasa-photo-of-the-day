@@ -19,9 +19,17 @@ code {
 .topbar {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   background: rgba(75, 75, 75, 0.452);
-  /* position: fixed; */
+  position: fixed;
   width:100%;
+  padding: .5% 0 .5% 2%;
+}
+
+.logo-container {
+  padding-right: 2%;
+  padding-top: .5%;
 }
 
 h1 {
@@ -30,9 +38,9 @@ h1 {
 
 .sidebar {
   background-color: lightgray;
-  width: 40%;
-  padding: 2%;
-  /* display:none; */
+  width: 30%;
+  padding: 2% 2% 0 2%;
+  display:none;
 }
 
 .page-content {
@@ -51,7 +59,7 @@ h1 {
 }
 
 .apod-container img {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
     min-width: 100%;
     min-height: 100%;
   object-fit: fill;
