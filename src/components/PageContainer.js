@@ -7,6 +7,8 @@ import axios from "axios";
 const PageContainer = () => {
     const [data, setData] = useState([]);
 
+    // const [menu, isMenuOpen] = useState(false)
+
     useEffect(() => {
         axios.get('https://api.nasa.gov/planetary/apod?api_key=c0twgDxBhmRHKgVFxT5t6aKuRnPZhL4qRkRC55al').then(res => {
         setData(res.data)
