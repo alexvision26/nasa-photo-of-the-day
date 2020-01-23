@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Loader from "react-loader-spinner";
 
 const MarsPhotos = styled.div`
     position: fixed;
@@ -28,15 +29,39 @@ const MarsRandom = styled.img`
     margin-bottom: 15px;
 `;
 
+const LoaderDiv = styled.div`
+    padding: 25% 5%;
+`;
+
  const Asteroid = props => {
 
     return (
         <MarsPhotos>
-            <MarsTitle>Daily Mars Photo</MarsTitle>
+            {/* <Loader
+         type="RevolvingDot"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         timeout={3500}/> */}
+
+        <MarsTitle>Daily Mars Photo</MarsTitle>
+
+         {props.roverName.length == 0 ? <LoaderDiv><Loader
+         type="RevolvingDot"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         timeout={3500}/></LoaderDiv> : <>
+         <h3>Earth date: {props.earthDate}</h3>
+         <h3>Rover: {props.roverName} </h3>
+         <h3>Camera: {props.cameraName}</h3>
+         <MarsRandom src={props.asteroidData} /> </> }
+
+            {/* <MarsTitle>Daily Mars Photo</MarsTitle>
             <h3>Earth date: {props.earthDate}</h3>
             <h3>Rover: {props.roverName} </h3>
             <h3>Camera: {props.cameraName}</h3>
-            <MarsRandom src={props.asteroidData} />
+            <MarsRandom src={props.asteroidData} /> */}
         </MarsPhotos>
     )
 }
