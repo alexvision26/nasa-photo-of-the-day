@@ -22,27 +22,25 @@ code {
 
 .topbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: rgba(75, 75, 75, 0.644);
   position: fixed;
   width:100%;
-  padding: 2% 0%;
+  padding: .25% 0%;
 }
 
 .logo-container {
-  padding: 1%;
+  padding: 1.5%;
   /* display:none; */
-  margin: 0 auto;
-  display:none;
 }
 
 h1 {
   color: white;
   font-size: 2.2rem;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 27.5%;
 }
 
 .sidebar {
