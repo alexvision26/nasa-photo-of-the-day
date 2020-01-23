@@ -24,7 +24,7 @@ const PageContainer = () => {
 
     useEffect(() => {
         axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=c0twgDxBhmRHKgVFxT5t6aKuRnPZhL4qRkRC55al').then(res => {
-            let photoSelector = Math.floor((Math.random() * 856) + 1);
+            let photoSelector = Math.floor((Math.random() * 856) + 1); //generates random numbers to select random Mars rover photos from archive
             let newMarsPhoto = res.data.photos[photoSelector].img_src;
             let newEarthDate = res.data.photos[photoSelector].earth_date;
             let newCameraName = res.data.photos[photoSelector].camera.name;

@@ -29,10 +29,7 @@ const MarsRandom = styled.img`
 `;
 
  const Asteroid = props => {
-// console.log(newMarsPhoto.rover)
-// console.log(props.asteroidData[photoSelector])
-// console.log(photoSelector)
-//  console.log(props.asteroidData)
+
     return (
         <MarsPhotos>
             <MarsTitle>Daily Mars Photo</MarsTitle>

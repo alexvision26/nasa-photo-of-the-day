@@ -25,10 +25,10 @@ This homework is a continuation of the work you have done previously.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into master (student's Repository).
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master.
-- [ ] Do your magic!
+- [x] Submit a Pull-Request to merge Branch into master (student's Repository).
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete by merging the branch back into master.
+- [x] Do your magic!
 
 # _Project - NASA APOD (Continued...)_
 
@@ -40,8 +40,8 @@ Follow these steps for completing your project.
 
 ## _MVP Requirements:_
 
-- [ ] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
-- [ ] Implement and use at least a few styled components to beautify your project.
+- [x] Refactor your project using a component library that was covered in class (Reactstrap or styled-components).
+- [x] Implement and use at least a few styled components to beautify your project.
 
 
 ## Stretch Problems
