@@ -3,9 +3,14 @@ import Header from "./Header";
 import InfoContainer from "./InfoContainer";
 import Apod from "./Apod";
 import axios from "axios";
+import Asteroid from "./Asteroid";
 
 const PageContainer = () => {
     const [data, setData] = useState([]);
+    const [marsData, setMarsData] = useState([]);
+    const [earthDate, setEarthDate] = useState([]);
+    const [cameraName, setCameraName] = useState([]);
+    const [roverName, setRoverName] = useState([]);
 
     // const [menu, isMenuOpen] = useState(false)
 
@@ -17,11 +22,29 @@ const PageContainer = () => {
     });
     }, [])
 
+    useEffect(() => {
+        axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=c0twgDxBhmRHKgVFxT5t6aKuRnPZhL4qRkRC55al').then(res => {
+            let photoSelector = Math.floor((Math.random() * 856) + 1);
+            let newMarsPhoto = res.data.photos[photoSelector].img_src;
+            let newEarthDate = res.data.photos[photoSelector].earth_date;
+            let newCameraName = res.data.photos[photoSelector].camera.name;
+            let newRoverName = res.data.photos[photoSelector].rover.name;
+            console.log(res.data)
+            setMarsData(newMarsPhoto)
+            setEarthDate(newEarthDate)
+            setCameraName(newCameraName)
+            setRoverName(newRoverName)
+            }).catch(error =>{
+            console.log('The data was not return', error)
+    });
+    }, [])
+
     return (
         <div className="container">
             <Header />
             <div className="page-content">
                 <InfoContainer data={data} />
+                <Asteroid asteroidData={marsData} earthDate={earthDate} cameraName={cameraName} roverName={roverName}/>
                 <Apod data={data}/>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const InfoContainer = props => {
     // console.log(props)
@@ -11,9 +11,6 @@ const InfoContainer = props => {
             <h4>Today's Date: {props.data.date}</h4>
             <h4>Credit: {props.data.copyright}</h4>
         </div>
-        {/* <div className='title-btn sidebar--open'>
-            <h1>{props.data.title}</h1>
-        </div> */}
         </>
     )
 }

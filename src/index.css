@@ -28,19 +28,22 @@ code {
   background: rgba(75, 75, 75, 0.644);
   position: fixed;
   width:100%;
-  padding: .25% 0%;
+  padding: 1.5% 0%;
 }
 
 .logo-container {
   padding: 1.5%;
   /* display:none; */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1 {
   color: white;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   text-align: center;
-  margin-left: 27.5%;
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -77,8 +80,9 @@ h1 {
 }
 
 .sidebar h2 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin-top: 12px;
+  white-space: nowrap;
 }
 
 .page-content {
