@@ -7,6 +7,7 @@ const MarsPhotos = styled.div`
     bottom: 0;
     right: 3%;
     color: white;
+    padding-bottom: 1%;
     background: rgba(75, 75, 75, 0.644);
     max-height: 65px;
     width: 25%;
@@ -14,12 +15,18 @@ const MarsPhotos = styled.div`
     &:hover {
         max-height: 800px;
     }
+    line-height: 1.5;
+    h3 {
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    }
 
 `;
 
 const MarsTitle = styled.h2`
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     margin-top: 12px;
+    margin-bottom: 3%;
     white-space: nowrap;
 `;
 
