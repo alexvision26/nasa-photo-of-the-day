@@ -15,18 +15,18 @@ const MarsPhotos = styled.div`
     &:hover {
         max-height: 800px;
     }
-    line-height: 1.5;
+    line-height: 1.4;
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding-bottom: 5px;
     }
 
 `;
 
 const MarsTitle = styled.h2`
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-top: 12px;
-    margin-bottom: 3%;
+    margin-bottom: 4.5%;
     white-space: nowrap;
 `;
 

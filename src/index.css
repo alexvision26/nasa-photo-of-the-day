@@ -44,6 +44,10 @@ table {
 
 /*Code Start Here*/
 
+html {
+  zoom: 1;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -76,11 +80,11 @@ code {
   background: rgba(75, 75, 75, 0.644);
   position: fixed;
   width:100%;
-  padding: 1.5% 0%;
+  padding: 2% 0%;
 }
 
 .logo-container {
-  padding: 1%;
+  padding: .8%;
   /* display:none; */
   position: absolute;
   top: 0;
@@ -89,7 +93,7 @@ code {
 
 h1 {
   color: white;
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   text-align: center;
   margin: 0 auto;
   font-weight: 625;
@@ -97,7 +101,7 @@ h1 {
 
 .sidebar {
   background: rgba(75, 75, 75, 0.644);
-  width: 35%;
+  width: 38%;
   padding: 1% 2% 1% 2%;
   position: fixed;
   max-height: 80px;
@@ -129,7 +133,7 @@ h1 {
 }
 
 .sidebar h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   white-space: nowrap;
   margin-bottom: 7%;
   padding-top: 2%;
@@ -141,8 +145,8 @@ h1 {
 
 .sidebar p, h4 {
   padding: 1.5% 0 2% 0;
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-size: 1rem;
+  line-height: 1.15;
 }
 
 .page-content {
