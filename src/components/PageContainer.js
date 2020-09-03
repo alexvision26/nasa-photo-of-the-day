@@ -21,7 +21,7 @@ const PageContainer = () => {
 
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_KEY}&date=${dateString}`).then(res => {
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=3YfSjeP7gjd7LA8dMkdm4Xd04AVe1yQJXMzTctua&date=${dateString}`).then(res => {
             console.log(res.data)
             setData(res.data)
         }).catch(error =>{
