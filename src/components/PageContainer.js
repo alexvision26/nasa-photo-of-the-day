@@ -5,6 +5,11 @@ import Apod from "./Apod";
 import axios from "axios";
 import Asteroid from "./Asteroid";
 
+import './DatePicker.scss';
+import "react-datepicker/dist/react-datepicker.css";
+
+import DatePicker from "react-datepicker";
+
 const PageContainer = () => {
     const [data, setData] = useState([]);
     const [marsData, setMarsData] = useState([]);
@@ -12,10 +17,12 @@ const PageContainer = () => {
     const [cameraName, setCameraName] = useState([]);
     const [roverName, setRoverName] = useState([]);
 
-    // const [menu, isMenuOpen] = useState(false)
+    const ApodAPI = process.env.REACT_APP_APOD_KEY
+
+    const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=c0twgDxBhmRHKgVFxT5t6aKuRnPZhL4qRkRC55al').then(res => {
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${ApodAPI}`).then(res => {
         setData(res.data)
         }).catch(error =>{
         console.log('The data was not return', error)
@@ -29,7 +36,7 @@ const PageContainer = () => {
             let newEarthDate = res.data.photos[photoSelector].earth_date;
             let newCameraName = res.data.photos[photoSelector].camera.name;
             let newRoverName = res.data.photos[photoSelector].rover.name;
-            console.log(res.data)
+
             setMarsData(newMarsPhoto)
             setEarthDate(newEarthDate)
             setCameraName(newCameraName)
@@ -39,9 +46,19 @@ const PageContainer = () => {
     });
     }, [])
 
+    const handleDate = newDate => {
+        setDate(newDate)
+      };
+
     return (
         <div className="container">
             <Header />
+
+            <DatePicker
+                selected={date}
+                onChange={handleDate}
+            />
+
             <div className="page-content">
                 <InfoContainer data={data} />
                 <Asteroid asteroidData={marsData} earthDate={earthDate} cameraName={cameraName} roverName={roverName}/>

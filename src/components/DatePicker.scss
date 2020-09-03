@@ -1,0 +1,30 @@
+.react-datepicker-wrapper {
+    position: absolute;
+    z-index: 5;
+    top:40%;
+    left: 5%;
+
+    input {
+        background-color: rgba(49, 49, 49, 0.192);
+        border: none;
+        border-bottom: 1px solid white;
+        font-size: 3rem;
+
+        &:active {
+            border: 1px solid white;
+        }
+
+        &:focus {
+            border: none;
+            -webkit-appearance: none;
+        }
+    }
+
+    .react-datepicker-ignore-onclickoutside {
+        background-color: rgba(49, 49, 49, 0.192);
+    }
+
+    // .react-datepicker__input-container {
+        
+    // }
+}

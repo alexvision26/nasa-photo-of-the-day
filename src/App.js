@@ -1,6 +1,6 @@
 import React from "react";
 import PageContainer from "./components/PageContainer"
-import "./App.css";
+import "./App.scss";
 
 function App() {
 
