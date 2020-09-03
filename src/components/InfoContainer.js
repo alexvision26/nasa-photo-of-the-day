@@ -8,7 +8,7 @@ const InfoContainer = props => {
             <h2>{props.data.title}</h2>
             <p><strong>Description:</strong> {props.data.explanation}</p>
             <a href={props.data.hdurl} target="_blank">Click here to view full resolution.</a>
-            <h4>Today's Date: {props.data.date}</h4>
+            <h4>Today's Date: {props.data.date} PST.</h4>
             <h4>Credit: {props.data.copyright}</h4>
         </div>
         </>

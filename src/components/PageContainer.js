@@ -12,11 +12,18 @@ const PageContainer = () => {
     const [cameraName, setCameraName] = useState([]);
     const [roverName, setRoverName] = useState([]);
 
-    // const [menu, isMenuOpen] = useState(false)
+    // const date = new Date(-8).toISOString().substr(0,10)
+    let date = new Date()
+
+    let dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000 ))
+                    .toISOString()
+                    .split("T")[0];
+
 
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=c0twgDxBhmRHKgVFxT5t6aKuRnPZhL4qRkRC55al').then(res => {
-        setData(res.data)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_KEY}&date=${dateString}`).then(res => {
+            console.log(res.data)
+            setData(res.data)
         }).catch(error =>{
         console.log('The data was not return', error)
     });
@@ -29,7 +36,7 @@ const PageContainer = () => {
             let newEarthDate = res.data.photos[photoSelector].earth_date;
             let newCameraName = res.data.photos[photoSelector].camera.name;
             let newRoverName = res.data.photos[photoSelector].rover.name;
-            console.log(res.data)
+            // console.log(res.data)
             setMarsData(newMarsPhoto)
             setEarthDate(newEarthDate)
             setCameraName(newCameraName)
