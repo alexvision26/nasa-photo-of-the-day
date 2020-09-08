@@ -81,23 +81,62 @@ code {
   position: fixed;
   width:100%;
   padding: 2% 0%;
+
+  h1 {
+    color: white;
+    font-size: 2.6rem;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 625;
+
+    @media only screen and (max-width: 1200px){
+      padding: 1% 0;
+    }
+  
+    @media only screen and (max-width: 800px){
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 800px){
+    padding: 4% 0;
+  }
+
+  @media only screen and (max-width: 600px){
+    height: auto;
+    position: inherit;
+    flex-direction: column;
+    background: rgb(43, 43, 43);
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+
 }
 
 .logo-container {
-  padding: .8%;
+  padding: 1.2% 1.5% 1.5%;
   /* display:none; */
   position: absolute;
   top: 0;
   left: 0;
+
+  @media only screen and (max-width: 800px){
+    position: inherit;
+  }
+
+  @media only screen and (max-width: 600px){
+    padding: 0;
+    margin: 0 auto;
+    
+    img {
+      width: 20%;
+    }
+  }
 }
 
-h1 {
-  color: white;
-  font-size: 2.6rem;
-  text-align: center;
-  margin: 0 auto;
-  font-weight: 625;
-}
+
 
 .sidebar {
   background: rgba(75, 75, 75, 0.644);
@@ -110,11 +149,53 @@ h1 {
   color: white;
   transition: max-height 0.6s ease-in-out;
   /* display:none; */
+
+  h2 {
+    font-size: 2.4rem;
+    /* white-space: nowrap; */
+    margin-bottom: 7%;
+    padding-top: 2%;
+  }
+
+  a {
+    margin-bottom: 1.2%;
+  }
+
+  p, h4 {
+    padding: 1.5% 0 2% 0;
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+
+  &:hover{
+    max-height: 800px;
+  }
+
+  @media only screen and (max-width: 1200px){
+    width: 60%;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 950px){
+    width: 70%;
+    padding: 2.5%;
+    left: 12%;
+  }
+
+  @media only screen and (max-width: 600px){
+    position: relative;
+    max-height: 100%;
+  }
+
 }
 
-.sidebar:hover{
-  max-height: 800px;
+.sidebar--open {
+  display: visible;
 }
+
 
 .title-btn {
   position: fixed;
@@ -122,52 +203,45 @@ h1 {
   left: 0;
   padding: 0 3%;
   background: rgba(75, 75, 75, 0.644);
-}
 
-.title-btn h1 {
-  font-size: 3.2rem;
-}
-
-.sidebar--open {
-  display: visible;
-}
-
-.sidebar h2 {
-  font-size: 2.4rem;
-  white-space: nowrap;
-  margin-bottom: 7%;
-  padding-top: 2%;
-}
-
-.sidebar a {
-  margin-bottom: 1.2%;
-}
-
-.sidebar p, h4 {
-  padding: 1.5% 0 2% 0;
-  font-size: 1rem;
-  line-height: 1.15;
+  h1 {
+    font-size: 3.2rem;
+  }
 }
 
 .page-content {
   display: flex;
   flex-direction: row;
+  background-color: rgb(43, 43, 43);
+
+  @media only screen and (max-width: 600px){
+    flex-direction: column-reverse;
+    padding-bottom: 5%;
+  }
 }
 
 .apod-container {
   height: 100vh;
   width:100%;
+  background-color: rgb(43, 43, 43);
   overflow: hidden;
   display:flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 600px){
+    height: auto;
+  }
   
 }
 
 .apod-container img {
-  /* flex-shrink: 0; */
-    min-width: 100%;
-    min-height: 100%;
+  width:100%;
   object-fit: fill;
-  object-position: center;
+  object-position: bottom;
+}
+
+.apod-img {
+  width: 100%;
+  /* min-height: 100%; */
 }
