@@ -21,18 +21,21 @@ const MarsPhotos = styled.div`
         padding-bottom: 5px;
     }
 
+    @media only screen and (max-width: 950px){
+        display:none;
+    }
+
 `;
 
 const MarsTitle = styled.h2`
     font-size: 2rem;
     margin-top: 12px;
-    margin-bottom: 4.5%;
-    white-space: nowrap;
+    margin-bottom: 5%;
 `;
 
 const MarsRandom = styled.img`
-    width: 300px;
-    height: 300px;
+    width: 75%;
+    height: auto;
     margin-bottom: 15px;
 `;
 
@@ -44,12 +47,6 @@ const LoaderDiv = styled.div`
 
     return (
         <MarsPhotos>
-            {/* <Loader
-         type="RevolvingDot"
-         color="#00BFFF"
-         height={100}
-         width={100}
-         timeout={3500}/> */}
 
         <MarsTitle>Daily Mars Photo</MarsTitle>
 
@@ -64,11 +61,6 @@ const LoaderDiv = styled.div`
          <h3>Camera: {props.cameraName}</h3>
          <MarsRandom src={props.asteroidData} /> </> }
 
-            {/* <MarsTitle>Daily Mars Photo</MarsTitle>
-            <h3>Earth date: {props.earthDate}</h3>
-            <h3>Rover: {props.roverName} </h3>
-            <h3>Camera: {props.cameraName}</h3>
-            <MarsRandom src={props.asteroidData} /> */}
         </MarsPhotos>
     )
 }
